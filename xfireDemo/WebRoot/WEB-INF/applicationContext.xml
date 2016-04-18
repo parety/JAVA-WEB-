@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 服务的实现 Bean -->
+	<bean id="helloService"
+		class="com.helloweenvsfei.ch24.HelloWebServiceImpl">
+	</bean>
+	<!-- 定义Web服务 Bean-->
+	<bean name="MyWebService"
+		class="org.codehaus.xfire.spring.ServiceBean">
+		<!-- 注入服务的实现Bean -->
+		<property name="serviceBean" ref="helloService" />
+		<!-- 注入服务的接口Bean -->
+		<property name="serviceClass"
+			value="com.helloweenvsfei.ch24.IHelloWebService" />
+		<!-- 注入服务的inHandlers Bean -->
+		<property name="inHandlers">
+			<list>
+				<ref bean="addressingHandler" />
+			</list>
+		</property>
+	</bean>
+	<!-- 定义inHandlers Bean -->
+	<bean id="addressingHandler"
+		class="org.codehaus.xfire.addressing.AddressingInHandler" />
+
+	<!-- 定义domIn Handler -->
+	<bean id="domInHandler"
+		class="org.codehaus.xfire.util.dom.DOMInHandler" />
+
+	<!-- 定义验证用户 Handler -->
+	<bean id="validateUserTokenHandler"
+		class="com.helloweenvsfei.ch24.auth.ValidateUserTokenHandler" />
+
+	<!-- 定义wss4j Handler -->
+	<bean id="wss4jInHandler"
+		class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">UsernameToken</prop>
+				<prop key="passwordCallbackClass">
+					com.helloweenvsfei.ch24.auth.PasswordHandler
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 定义wss4j加密Handler -->
+	<bean id="wss4jInHandlerEnc"
+		class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">Encrypt</prop>
+				<prop key="decryptionPropFile">
+					META-INF/xfire/insecurity.properties
+				</prop>
+				<prop key="passwordCallbackClass">
+					com.helloweenvsfei.ch24.auth.PasswordHandler
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 定义wss4j签名Handler -->
+	<bean id="wss4jInHandlerSign"
+		class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">Signature</prop>
+				<prop key="signaturePropFile">
+					META-INF/xfire/insecurity.properties
+				</prop>
+				<prop key="passwordCallbackClass">
+					com.helloweenvsfei.ch24.auth.PasswordHandler
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 使用 WSS4J验证 -->
+	<bean name="MyWebServiceWSS4J"
+		class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="helloService" />
+		<property name="serviceClass"
+			value="com.helloweenvsfei.ch24.IHelloWebService" />
+		<property name="inHandlers">
+			<list>
+				<ref bean="domInHandler" />
+				<ref bean="wss4jInHandler" />
+				<ref bean="validateUserTokenHandler" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- 使用 WSS4J加密验证 -->
+	<bean name="MyWebServiceWSS4JEnc"
+		class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="helloService" />
+		<property name="serviceClass"
+			value="com.helloweenvsfei.ch24.IHelloWebService" />
+		<property name="inHandlers">
+			<list>
+				<ref bean="domInHandler" />
+				<ref bean="wss4jInHandlerEnc" />
+				<ref bean="validateUserTokenHandler" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- 使用 WSS4J签名验证 -->
+	<bean name="MyWebServiceWSS4JSign"
+		class="org.codehaus.xfire.spring.ServiceBean">
+		<property name="serviceBean" ref="helloService" />
+		<property name="serviceClass"
+			value="com.helloweenvsfei.ch24.IHelloWebService" />
+		<property name="inHandlers">
+			<list>
+				<ref bean="domInHandler" />
+				<ref bean="wss4jInHandlerSign" />
+				<ref bean="validateUserTokenHandler" />
+			</list>
+		</property>
+	</bean>
+</beans>

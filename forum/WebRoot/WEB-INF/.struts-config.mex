@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/person.do" location="50,50" dimension="352,84" />
+  <StrutsActivity path="/category.do" location="405,180" dimension="364,84" />
+  <StrutsActivity path="/board.do" location="50,350" dimension="346,84" />
+  <StrutsActivity path="/thread.do" location="950,350" dimension="352,84" />
+  <StrutsActivity path="/reply.do" location="350,550" dimension="346,84" />
+  <StrutsActivity path="/form/person/listPerson.jsp" location="600,-75" dimension="202,48" />
+  <StrutsActivity path="/form/person/addPerson.jsp" location="930,75" dimension="196,48" />
+  <StrutsActivity path="/form/category/listCategory.jsp" location="75,210" dimension="226,48" />
+  <StrutsActivity path="/form/board/listBoard.jsp" location="650,350" dimension="190,48" />
+  <StrutsActivity path="/form/thread/listThread.jsp" location="50,550" dimension="202,48" />
+  <StrutsActivity path="/form/reply/listReply.jsp" location="650,450" dimension="190,48" />
+  <StrutsActivity path="/form/reply.jsp" location="950,550" dimension="130,48" />
+  <StrutsTransition id="/form/person/listPerson.jsp,null,/person.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="701,-27" />
+      <AbsolutePoint location="701,75" />
+      <AbsolutePoint location="402,75" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/category/listCategory.jsp,null,/category.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="301,234" />
+      <AbsolutePoint location="405,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/thread/listThread.jsp,null,/thread.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/person.do,add,/form/person/addPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="402,105" />
+      <AbsolutePoint location="930,105" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/board/listBoard.jsp,null,/board.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,374" />
+      <AbsolutePoint location="396,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/person.do,list,/form/person/listPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="226,50" />
+      <AbsolutePoint location="226,-51" />
+      <AbsolutePoint location="600,-51" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/reply/listReply.jsp,null,/reply.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="681,498" />
+      <AbsolutePoint location="681,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

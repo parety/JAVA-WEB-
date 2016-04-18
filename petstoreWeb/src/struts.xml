@@ -1,0 +1,57 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 声明 Struts2 的属性  例如将 Struts2 后缀改为 .helloween -->
+	<!-- 
+		<constant name="struts.action.extension" value="helloween"></constant>
+	-->
+
+	<package name="main" extends="tiles-default">
+
+		<interceptors>
+			<interceptor name="authentication"
+				class="com.helloweenvsfei.struts2.interceptor.AuthenticationInterceptor">
+			</interceptor>
+		</interceptors>
+
+		<global-results>
+			<result name="login">/login.jsp</result>
+			<result name="success">/success.jsp</result>
+			<result name="register">/register.jsp</result>
+		</global-results>
+
+		<action name="user"
+			class="com.helloweenvsfei.petstore.web.action.UserAction">
+		</action>
+
+		<action name="category"
+			class="com.helloweenvsfei.petstore.web.action.CategoryAction">
+			<result name="input">/addCategory.jsp</result>
+			<result name="add">/addCategory.jsp</result>
+			<result name="list">/listCategory.jsp</result>
+			<result name="success">/categorySuccess.jsp</result>
+		</action>
+
+		<action name="pet"
+			class="com.helloweenvsfei.petstore.web.action.PetAction">
+			<result name="input">/addPet.jsp</result>
+			<result name="add">/addPet.jsp</result>
+			<result name="buy">/buyPet.jsp</result>
+			<result name="list">/listPet.jsp</result>
+			<result name="success">/petSuccess.jsp</result>
+			<result name="buySuccess">/petBuySuccess.jsp</result>
+		</action>
+
+		<action name="cart"
+			class="com.helloweenvsfei.petstore.web.action.CartAction">
+			<result name="input">/addCart.jsp</result>
+			<result name="add">/addCart.jsp</result>
+			<result name="list">/listCart.jsp</result>
+			<result name="success">/cartSuccess.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

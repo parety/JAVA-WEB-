@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" 
+		"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+
+	<!-- 父布局类型 -->
+	<definition name="test" path="/form/template.jsp">
+		<!-- 
+			<put name="copyright" value="/form/copyright.jsp"></put>
+		-->
+	</definition>
+
+</tiles-definitions>

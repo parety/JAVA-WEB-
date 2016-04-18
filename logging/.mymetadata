@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="logging"
+  id="myeclipse.1222831730837"
+  context-root="/logging"
+  j2ee-spec="5.0"
+  archive="logging.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

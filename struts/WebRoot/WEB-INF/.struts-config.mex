@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/test.do" location="165,360" dimension="136,61" />
+  <StrutsActivity path="/hello.do" location="75,120" dimension="331,84" />
+  <StrutsActivity path="/person.do" location="650,150" dimension="316,84" />
+  <StrutsActivity path="/dispatch.do" location="50,450" dimension="328,84" />
+  <StrutsActivity path="/tag.do" location="950,450" dimension="298,84" />
+  <StrutsActivity path="/upload.do" location="50,650" dimension="316,84" />
+  <StrutsActivity path="/tile.do" location="650,650" dimension="304,84" />
+  <StrutsActivity path="/useBean.do" location="50,950" dimension="322,84" />
+  <StrutsActivity path="/validatorTest.do" location="950,950" dimension="358,84" />
+  <StrutsActivity path="/form/hello.jsp" location="165,255" dimension="130,48" />
+  <StrutsActivity path="/form/helloFail.jsp" location="270,15" dimension="154,48" />
+  <StrutsActivity path="/form/helloSuccess.jsp" location="30,15" dimension="172,48" />
+  <StrutsActivity path="/form/listPerson.jsp" location="705,45" dimension="160,48" />
+  <StrutsActivity path="/form/addPersonSuccess.jsp" location="650,350" dimension="196,48" />
+  <StrutsActivity path="/form/addPerson.jsp" location="390,315" dimension="154,48" />
+  <StrutsActivity path="/form/dispatch.jsp" location="650,450" dimension="148,48" />
+  <StrutsActivity path="/form/tag.jsp" location="650,550" dimension="118,48" />
+  <StrutsActivity path="/form/upload.jsp" location="150,555" dimension="136,48" />
+  <StrutsActivity path="listLayout" location="650,850" dimension="100,48" />
+  <StrutsActivity path="viewLayout" location="950,850" dimension="100,48" />
+  <StrutsActivity path="/form/tile.jsp" location="50,850" dimension="124,48" />
+  <StrutsActivity path="/form/useBean.jsp" location="650,950" dimension="142,48" />
+  <StrutsActivity path="/form/validatorTest.jsp" location="350,1350" dimension="178,48" />
+  <StrutsActivity path="" location="350,850" dimension="40,48" />
+  <StrutsActivity path="/dynaTest.do" location="1250,650" dimension="328,84" />
+  <StrutsActivity path="/form/dynaTest.jsp" location="1250,850" dimension="148,48" />
+  <StrutsTransition id="/form/dynaTest.jsp,null,/dynaTest.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1324,850" />
+      <AbsolutePoint location="1324,734" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hello.do,success,/form/helloSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="187,120" />
+      <AbsolutePoint location="187,63" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tile.do,list,listLayout,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="735,734" />
+      <AbsolutePoint location="735,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hello.do,fail,/form/helloFail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="285,120" />
+      <AbsolutePoint location="285,63" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/tag.jsp,null,/tag.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="768,574" />
+      <AbsolutePoint location="1099,574" />
+      <AbsolutePoint location="1099,534" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/hello.jsp,null,/hello.do,2" routingType="1">
+    <Bendpoints />
+  </StrutsTransition>
+  <StrutsTransition id="/form/upload.jsp,null,/upload.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="218,603" />
+      <AbsolutePoint location="218,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/useBean.jsp,null,/useBean.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,974" />
+      <AbsolutePoint location="372,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/person.do,list,/form/listPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="808,150" />
+      <AbsolutePoint location="808,93" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/addPerson.jsp,null,/person.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="467,315" />
+      <AbsolutePoint location="467,189" />
+      <AbsolutePoint location="650,189" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/tile.jsp,null,/tile.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="112,850" />
+      <AbsolutePoint location="112,779" />
+      <AbsolutePoint location="772,779" />
+      <AbsolutePoint location="772,734" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/person.do,success,/form/addPersonSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="808,234" />
+      <AbsolutePoint location="808,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tile.do,view,viewLayout,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="802,692" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/dispatch.jsp,null,/dispatch.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,474" />
+      <AbsolutePoint location="378,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test.do,null,/form/hello.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="233,360" />
+      <AbsolutePoint location="233,303" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/validatorTest.jsp,null,/validatorTest.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

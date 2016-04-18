@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_174FsFNAEd29A6_sXvBENg" type="Class" name="classdiagram.dnx">
+  <children xmi:id="_6n9aUFNAEd29A6_sXvBENg">
+    <children xmi:id="_6oDg8FNAEd29A6_sXvBENg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=BaseBean[jcu^name=BaseBean.java[jpack^name=[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=forum]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_6oDg8VNAEd29A6_sXvBENg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_6oDg8lNAEd29A6_sXvBENg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=BaseBean[jcu^name=BaseBean.java[jpack^name=[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=forum]]]]"/>
+    </children>
+    <children xmi:id="_6oDg81NAEd29A6_sXvBENg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=BaseBean[jcu^name=BaseBean.java[jpack^name=[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=forum]]]]"/>
+    </children>
+    <children xmi:id="_6oDg9FNAEd29A6_sXvBENg" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_6oDg9VNAEd29A6_sXvBENg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=BaseBean[jcu^name=BaseBean.java[jpack^name=[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=forum]]]]"/>
+    </children>
+    <children xmi:id="_6q6nsFNAEd29A6_sXvBENg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_6q6nsVNAEd29A6_sXvBENg" collapsed="true"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=BaseBean[jcu^name=BaseBean.java[jpack^name=[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=forum]]]]"/>
+    </children>
+    <children xmi:id="_6q6nslNAEd29A6_sXvBENg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_6q6ns1NAEd29A6_sXvBENg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=BaseBean[jcu^name=BaseBean.java[jpack^name=[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=forum]]]]"/>
+    </children>
+    <children xmi:id="_6q6ntFNAEd29A6_sXvBENg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_6q6ntVNAEd29A6_sXvBENg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=BaseBean[jcu^name=BaseBean.java[jpack^name=[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=forum]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_6n9aUVNAEd29A6_sXvBENg" fontName="宋体"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=BaseBean[jcu^name=BaseBean.java[jpack^name=[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=forum]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6n9aUlNAEd29A6_sXvBENg" x="4452" y="636" width="5186" height="4183"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_174FsVNAEd29A6_sXvBENg"/>
+</notation:Diagram>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+	<service>
+		<!-- 服务名称 -->
+		<name>HelloWebService</name>
+		<!-- 服务接口类 -->
+		<serviceClass>
+			com.helloweenvsfei.ch24.IHelloWebService
+		</serviceClass>
+		<!-- 实现服务接口类 -->
+		<implementationClass>
+			com.helloweenvsfei.ch24.HelloWebServiceImpl
+		</implementationClass>
+		<inHandlers>
+			<handler
+				handlerClass="com.helloweenvsfei.ch24.auth.AuthenticationHandler" />
+		</inHandlers>
+		<!-- 绑定服务设置 -->
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+
+	<service>
+		<name>HelloWebServiceAuth</name>
+		<serviceClass>
+			com.helloweenvsfei.ch24.IHelloWebService
+		</serviceClass>
+		<implementationClass>
+			com.helloweenvsfei.ch24.HelloWebServiceImpl
+		</implementationClass>
+		<inHandlers>
+			<handler
+				handlerClass="com.helloweenvsfei.ch24.auth.AuthenticationHandler" />
+		</inHandlers>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+
+	<service>
+		<name>HelloWebServiceUTHP</name>
+		<serviceClass>
+			com.helloweenvsfei.ch24.IHelloWebService
+		</serviceClass>
+		<implementationClass>
+			com.helloweenvsfei.ch24.HelloWebServiceImpl
+		</implementationClass>
+		<inHandlers>
+			<handler
+				handlerClass="org.codehaus.xfire.util.dom.DOMInHandler" />
+			<bean id="org.codehaus.xfire.security.wss4j.WSS4JInHandler"
+				class="org.codehaus.xfire.security.wss4j.WSS4JInHandler" xmlns="">
+				<!-- 配置InHandler属性 -->
+				<property name="properties">
+					<props>
+						<!-- 配置认证类型-->
+						<prop key="action">UsernameToken</prop>
+						<!-- 配置根据用户名查询出对应的密码回调方法-->
+						<prop key="passwordCallbackClass">
+							com.helloweenvsfei.ch24.auth.PasswordHandler
+						</prop>
+					</props>
+				</property>
+			</bean>
+			<!-- 验证用户身份 -->
+			<handler
+				handlerClass="com.helloweenvsfei.ch24.auth.ValidateUserTokenHandler" />
+		</inHandlers>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+
+	<service>
+		<name>HelloWebServiceSign</name>
+		<serviceClass>
+			com.helloweenvsfei.ch24.IHelloWebService
+		</serviceClass>
+		<implementationClass>
+			com.helloweenvsfei.ch24.HelloWebServiceImpl
+		</implementationClass>
+		<inHandlers>
+			<handler
+				handlerClass="org.codehaus.xfire.util.dom.DOMInHandler" />
+			<bean id="org.codehaus.xfire.security.wss4j.WSS4JInHandler"
+				class="org.codehaus.xfire.security.wss4j.WSS4JInHandler" xmlns="">
+				<!-- 配置InHandler属性 -->
+				<property name="properties">
+					<props>
+						<!-- 配置认证类型为数字证书-->
+						<prop key="action">Signature</prop>
+						<!-- 配置数字证书属性-->
+						<prop key="signaturePropFile">
+							META-INF/xfire/insecurity.properties
+						</prop><!-- 配置根据用户名查询出对应的密码回调方法-->
+						<prop key="passwordCallbackClass">
+							com.helloweenvsfei.ch24.auth.PasswordHandler
+						</prop>
+					</props>
+				</property>
+			</bean>
+			<!-- 验证用户身份 -->
+			<handler
+				handlerClass="com.helloweenvsfei.ch24.auth.ValidateUserTokenHandler" />
+		</inHandlers>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+		<service>
+		<name>HelloWebServiceENC</name>
+		<serviceClass>
+			com.helloweenvsfei.ch24.IHelloWebService
+		</serviceClass>
+		<implementationClass>
+			com.helloweenvsfei.ch24.HelloWebServiceImpl
+		</implementationClass>
+		<inHandlers>
+			<handler
+				handlerClass="org.codehaus.xfire.util.dom.DOMInHandler" />
+			<bean id="org.codehaus.xfire.security.wss4j.WSS4JInHandler"
+				class="org.codehaus.xfire.security.wss4j.WSS4JInHandler" xmlns="">
+				<!-- 配置InHandler属性 -->
+				<property name="properties">
+					<props>
+						<!-- 配置认证类型为数字证书-->
+						<prop key="action">Encrypt</prop>
+						<!-- 配置数字证书属性-->
+						<prop key="decryptionPropFile">
+							META-INF/xfire/insecurity.properties
+						</prop><!-- 配置根据用户名查询出对应的密码回调方法-->
+						<prop key="passwordCallbackClass">
+							com.helloweenvsfei.ch24.auth.PasswordHandler
+						</prop>
+					</props>
+				</property>
+			</bean>
+			<!-- 验证用户身份 -->
+			<handler
+				handlerClass="com.helloweenvsfei.ch24.auth.ValidateUserTokenHandler" />
+		</inHandlers>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+</beans>

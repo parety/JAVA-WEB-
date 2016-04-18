@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>PHPWind社区营销 - PHPWind Board 论坛 建站 - powered by phpwind.net</title>
+<meta name="keywords" content="PHPWind社区营销,phpwind" />
+<meta name="description" content=" PHPWind一站式营销。社区营销使用技巧交流,问题处理,意见反馈..." />
+<link rel='archives' title='PHPWind Board' href='http://www.phpwind.net/simple' />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.phpwind.net/rss.php?fid=82" />
+<base id="headbase" href="http://www.phpwind.net/" />
+
+<!--css--><style type="text/css">
+body{font-family:Tahoma;font-size:12px;background:#e1d5aa url(images/yellow/bg1.jpg) top center repeat-y; margin:auto;}
+h1,h2,h3,h4,h5,h6,form,body{padding:0;margin:0}
+td,th,div{word-break:break-all;word-wrap:break-word}
+table{empty-cells:show;}
+img{border:0}
+h1{font-size:16px;margin:.5em 1em 1em 0}
+h3,h2{display:inline;font-size:1.0em;}
+h3{font-weight:normal}
+h2 a,h3 a{color:#000}
+h4{margin:20px 0 10px;font-size:1.1em}
+textarea,input,select{font:12px Arial;padding:1px 3px 0 3px;vertical-align:middle;margin-bottom:1px}
+.c{clear:both;height:0;font:0/0 Arial;}
+.b{font-weight:bold}
+.tal{text-align:left}
+.tac{text-align:center}
+.tar{text-align:right}
+.fr{float:right}
+.fl{float:left}
+/*a link 基本连接颜色*/
+a{text-decoration:none;color:#96465d}
+a:hover{text-decoration:underline;}
+.abtn{cursor:pointer;border:1px solid #c7b985;color:#96465d;padding:2px 8px;margin-left:2px;height:30px}
+/*字体大小*/
+.f9{font-size:11px;}
+.f10{font-size:11px;}
+.f12{font-size:12px}
+.f14{font-size:14px}
+.fn,.fn a{font-weight:normal}
+/*span color 数值自定义*/
+.s1{color:#008000;}
+.s2{color:#984B98;}
+.s3{color:#FA891B;}
+.s4{color:#0033FF;}
+.s5{color:#659B28}
+.gray{color:#818a89} /*次要文字颜色-可定义*/
+/*main color 数值自定义*/
+.f_one,.t_one,.r_one{background:#ffffff;}
+.f_two,.t_two,.r_two{background:#fbf8e9;}
+/*form*/
+textarea,input,select{font:12px Arial;padding:1px 3px 0 3px;vertical-align:middle;margin-bottom:1px}
+select{border:solid 1px #e1d5aa;}
+.btn{background:#c7b985 url(images/yellow/bg.png) 0 -200px repeat-x;color:#000000;border-width:1px;padding-left:15px;padding-right:15px;vertical-align:middle}
+.input{border:solid 1px #c7b985;padding:2px 0px 2px 1px;font-size:1.0em;vertical-align:middle}
+form{display:inline;}
+textarea{border:solid 1px #c7b985;}
+/*header*/
+#header{width:940px;margin:auto; background:url(images/yellow/headerbg.png) 0 0 repeat-x;}
+/*toolbar*/
+.toptool{background:url(images/yellow/bg.png) 0 0 repeat-x;color:#ffffff; padding-top:5px;}
+.toptool span{padding:1px 5px;line-height:150%;}
+.toptool span a{color:#ffffff;}
+/*index info*/
+#infobox{ border:#c7b985 1px solid; margin-top:-.8em;background:#c7b985 url(images/yellow/bg.png) 0 bottom repeat-x; }
+#notice{ margin:0 -.3em; height:20px}
+#notice a{ color:#fff; padding-left:1em; background:url(images/yellow/dotB.png) no-repeat 0 .1em; margin-left:1.5em}
+/*banner*/
+.banner img{vertical-align:middle;}
+/*guide*/
+.guide{background:#F3F8EF url(images/yellow/bg.png) 0 -100px repeat-x; padding:.5em;color:#ccc}
+.guide a{color:#ccc;}
+/*table*/
+.t{border:1px solid #c7b985;margin:0px auto 8px;}
+.t table{border:1px solid #fff;margin:0 auto;width:99.98%;}
+.t2{border-top:#c7b985 1px solid;margin:0px auto 5px;}
+.t3{margin:auto}
+.t4{padding:1px 0 1px 1px}
+/*table head*/
+.h{border-bottom:1px solid #f9c100;background:#E0F0F9 url(images/yellow/bg.png) 0 -200px repeat-x;text-align:left;color:#000000;padding:.3em .4em}
+.h span{font-weight:normal;}
+.h h2{font-weight:bold}
+.h a{font-family:Arial;color:#000000}
+.h span a,.h span{color:#5495A0;}
+.h a.a2{margin-left:12px;}
+/*table tr1*/
+.tr1 th{padding:5px 10px;text-align:left;vertical-align:top;font-weight:normal;}
+.tr1 td.td1{border:1px solid #e1d5aa;}
+/*table tr2*/
+.tr2{background:#F3F8EF url(images/yellow/bg.png) 0 -300px repeat-x;color:#dc565e;}
+.tr2 td,.tr2 th{line-height:18px;border-bottom:1px solid #c7b985;padding:2px 6px 0px;/*border-top:1px solid #c7b985;*/}
+.tr2 a{color:#dc565e;margin:2px 2px 0}
+/*table tr3*/
+.tr3 td,.tr3 th{border-bottom:1px solid #e1d5aa;padding:.3em .6em}
+.tr3 th{text-align:left;font-weight:normal;}
+.tr4{background:#E0F0F9 url(images/yellow/bg.png) 0 -200px repeat-x;color:#000000;}
+.tr4 td{padding:4px 10px;}
+.tr td,.tr th{padding:2px}
+/*topic content tips*/
+.tpc_content{font-size:14px;font-family:Arial;padding:0 2% 0 0.5%;margin:0 0 2%}
+.tips{background:#fbf8e9;border:#e1d5aa 1px solid;padding:5px;margin:0 1% 1% 0;float:left;text-align:center;}
+.tiptop{border-bottom:1px solid #e1d5aa;padding:0 0 5px 0;vertical-align:middle;}
+.tipad{border-top:1px solid #e1d5aa;margin:10px 0 0;padding:5px 0 0;}
+.quote{width:80%;font-size:70%;color:#000000;margin:8px 2px 2px;padding:0}
+blockquote{width:80%;font-size:85%;color:#81888c;border:1px solid #e1d5aa;border-left-width:3px;padding:5px;margin:0 0 1%}
+/*menu*/
+.menu{position:absolute;background:#fff;border:1px solid #c7b985;}
+.menu td, .menu li,.menu ul{background:#fff;padding:0; margin:0}
+.menu li{list-style:none;}
+.menu a{display:block;padding:3px 15px 3px 15px;background:#fff;}
+.menu a:hover{background:#96465d;text-decoration:none;color:#fff;}
+.menu ul.ul1 li a{display:inline;padding:0}
+/*pages*/
+.pages{margin:3px 0;font:11px/12px Tahoma}
+.pages *{vertical-align:middle;}
+.pages a{padding:1px 4px 1px;border:1px solid #c7b985;margin:0 1px 0 0;text-align:center;text-decoration:none;font:normal 12px/14px verdana;}
+.pages a:hover{border:#dc565e 1px solid;background:#F3F8EF;text-decoration:none;color:#000000}
+.pages input{margin-bottom:0px;border:1px solid #dc565e;height:15px;font:bold 12px/15px Verdana;padding-bottom:1px;padding-left:1px;margin-right:1px;color:#dc565e;}
+/*footer*/
+#footer{width:940px;text-align:right;border-top:2px solid #f9c100;margin:auto;padding:5px 0; background:#ffffff}
+#main{width:940px;margin: auto; padding:.8em 0 0; background:#ffffff}
+ /*自定义css*/
+</style><!--css-->
+
+<style type="text/css">/*竖线风格输出*/
+.tr3 td,.tr3 th{border-right:1px solid #e1d5aa;}
+.y-style{text-align:center;}
+.t table{border:0;width:100%;}
+.tr1 th{border-right:1px solid #e1d5aa;}
+.tr1 td.td1{border-left:0}
+.t{padding:1px}
+</style>
+<!--[if IE]>
+<style type="text/css">
+.t table{border:1px solid #fff;}
+</style><![endif]-->
+
+<!--[if IE]>
+<style type="text/css">
+.btn{/*border:3px double #c7b985*/; height:21px;padding-left:0.15em;padding-right:0.15em;}
+.tr1 td.td1{border-top:0}
+.t4{padding:0}
+.pages a{padding:1px 4px 2px;}
+.t table{width:100%;border-collapse:collapse;}
+.t {padding:0}
+.menu a{height:14px}
+</style>
+<![endif]-->
+
+</head>
+<body onkeydown="keyCodes(event);">
+<div id="wrapA">
+
+<div id="header">
+<div class="toptool tar">
+	<span><a href="home.php">Home首页</a>
+	| <a href="index.php">论坛首页</a>
+	</span>
+</div>
+<table cellspacing="0" cellpadding="0" align="center" width="100%">
+<tr>
+	<td class="banner"><a href="./"><img src="images/yellow/logo.png"/></a></td>
+	<td class="banner" id="banner" align="right"><a href="http://www.phpwind.net/read-htm-tid-628817.html" target="_blank"><img src="http://img1.phpwind.net/attachout/Mon_0807/71_816287_f809eb9ac681e96.gif"></a></td>
+</tr>
+<tr><td align="center" height="1" colspan="2"></td></tr>
+</table>
+<div id="h_guide" class="guide" colspan="2"><span class="s3">&raquo;</span>
+
+	您尚未　<a href="login.php">登录</a> &nbsp;<a href="register.php"><b>注册</b></a>
+
+	| <a href="search.php">搜索</a>
+
+</div>
+
+</div>
+<div id="main">
+
+<div class="t3" style="margin:8px auto"><table width="100%" cellspacing="0" cellpadding="0" align="center">
+	<tr><td>
+	<strong class="fl w"><img src="images/yellow/index/home_menu.gif" align="absmiddle" id="td_cate" onMouseOver="read.open('menu_cate','td_cate');" style="cursor:pointer;" /> <a href="index.php">PHPWind Board</a> &raquo; <a href="thread-htm-fid-82.html">PHPWind社区营销</a> <a href="rss.php?fid=82" target="_blank" title="RSS订阅本版面最新帖子"><img align="absmiddle" src="images/yellow/rss.png" /></a></strong>
+	<div class="fr w">
+
+		版主: &nbsp;<a href="profile-htm-action-show-username-%CC%F0%B3%C8.html">甜橙</a> 
+
+		</div>
+	</td></tr>
+</table></div>
+<div id="menu_cate" class="menu" style="display:none;"><div style="padding:5px;height:420px;width:200px;overflow-Y:auto;"><ul class="ul1"><li> <a href="index-htm-cateid-1.html">>> PHPwind 动态交流</a></li><li> &nbsp;<a href="thread-htm-fid-65.html">|- <font color=red>PHPWind最新动态</font></a></li><li> &nbsp;<a href="thread-htm-fid-78.html">|- PHPWind黑板报</a></li><li> &nbsp;<a href="thread-htm-fid-39.html">|- 程序发展建议</a></li><li> &nbsp;<a href="thread-htm-fid-18.html">|- PHPWind程序发布</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-27.html">|- 转换程序专栏</a></li><li> <a href="index-htm-cateid-85.html">>> PHPwind官方服务专区</a></li><li> &nbsp;<a href="thread-htm-fid-50.html">|- <font color=red>商业用户交流区</font></a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-69.html">|- 官方推荐插件区</a></li><li> &nbsp;<a href="thread-htm-fid-86.html">|- PHPWind产品销售</a></li><li> &nbsp;<a href="thread-htm-fid-82.html">|- PHPWind社区营销</a></li><li> &nbsp;<a href="thread-htm-fid-72.html">|- 数据转换申请专区</a></li><li> <a href="index-htm-cateid-66.html">>> PHPWind系列产品交流</a></li><li> &nbsp;<a href="thread-htm-fid-2.html">|- <font color=red>PW Forums[论坛系统]讨论区</font></a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-13.html">|- HOW-TOs(新手教程&#41;</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-77.html">|- <font color=red><b>PHPWind Manual</b></font></a></li><li> &nbsp;<a href="thread-htm-fid-3.html">|- PW Forums[论坛系统] 插件开发</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-47.html">|- Hack & 插件发布区</a></li><li> &nbsp;<a href="thread-htm-fid-4.html">|- PW Forums[论坛系统] 模板风格</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-48.html">|- 优秀风格区</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-55.html">|- PW风格素材区</a></li><li> &nbsp;<a href="thread-htm-fid-67.html">|- VeryCMS[内容管理系统] 讨论区</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-68.html">|- VeryCMS模版风格</a></li><li> &nbsp;<a href="thread-htm-fid-21.html">|- LxBlog[博客系统] 讨论专区</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-52.html">|- BLOG 插件开发</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-53.html">|- BLOG 模版风格</a></li><li> &nbsp;<a href="thread-htm-fid-70.html">|- LxShop[商城系统] 讨论专区</a></li><li> <a href="index-htm-cateid-35.html">>> 站长技术与资源交流</a></li><li> &nbsp;<a href="thread-htm-fid-57.html">|- <font color=red>站长交流</font></a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-56.html">|- <font color=green><b>PW使用教程投稿</b></font></a></li><li> &nbsp;<a href="thread-htm-fid-36.html">|- UNIX 技术交流</a></li><li> &nbsp;<a href="thread-htm-fid-22.html">|- PHP/Java 讨论区</a></li><li> &nbsp;<a href="thread-htm-fid-19.html">|- 源代码交流</a></li><li> &nbsp;<a href="thread-htm-fid-11.html">|- 软件信息交流</a></li><li> &nbsp;<a href="thread-htm-fid-76.html">|- 站长广告专区</a></li><li> &nbsp;<a href="thread-htm-fid-93.html">|- ShopEx网上商店商城系统</a></li><li> &nbsp;<a href="thread-htm-fid-96.html">|- HiShop网上商店系统</a></li><li> &nbsp;<a href="thread-htm-fid-90.html">|- DedeCms织梦内容管理系统</a></li><li> &nbsp;<a href="thread-htm-fid-91.html">|- PHP168整站系统</a></li><li> &nbsp;<a href="thread-htm-fid-92.html">|- CMSWARE 思维网站内容管理系统</a></li><li> <a href="index-htm-cateid-14.html">>> 综合社区</a></li><li> <a href="index-htm-cateid-10.html">>> 站务管理</a></li><li> &nbsp;<a href="thread-htm-fid-25.html">|- PHPWind Team</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-88.html">|- 主机业务</a></li><li> &nbsp;<a href="thread-htm-fid-26.html">|- 站务管理与公告</a></li><li> &nbsp; &nbsp;<a href="thread-htm-fid-51.html">|- 版主申请投票栏</a></li></ul></div></div>
+
+<div class="c"></div>
+
+<div class="t3"><table width="100%" align="center" cellspacing="0" cellpadding="0">
+	<tr><td align="left" valign="middle">
+		<div class="fl">
+			<div class="pages">
+				<a href="thread-htm-fid-82-page-1.html" style="font-weight:bold">&laquo;</a><b> 1 </b><a href="thread-htm-fid-82-page-2.html">2</a><a href="thread-htm-fid-82-page-3.html">3</a><a href="thread-htm-fid-82-page-4.html">4</a><a href="thread-htm-fid-82-page-5.html">5</a><input type="text" size="3" onkeydown="javascript: if(event.keyCode==13){ location='thread.php?fid=82&page='+this.value+'';return false;}"><a href="thread-htm-fid-82-page-42.html" style="font-weight:bold">&raquo;</a> Pages: ( 1/42 total ) </div></div></td>
+	<td style="text-align:right">
+
+	<a href="post-htm-fid-82.html"><img src="images/yellow/post.png" id="td_post" /></a>
+
+	</td>
+	</tr>
+</table></div>
+
+<div id="menu_post" class="menu tac f14" style="display:none;">
+	<ul style="width:99px">
+	<li><a href="post-htm-fid-82.html">新  帖</a></li>
+	</ul>
+</div>
+
+<div class="t z" style="margin:3px auto"><table cellspacing="0" cellpadding="0" width="100%" id="ajaxtable">
+	<tr><th class="h" colspan="6">
+		<div class="fr"><a class="a2 fn" href="thread-htm-fid-82.html">全部</a> <a class="a2 fn" href="thread-htm-fid-82-search-digest.html">精华</a>
+
+		</div>
+	<a href="thread-htm-fid-82.html" class="fl">PHPWind社区营销</a>
+		</th>
+	</tr>
+	<tbody style="table-layout:fixed;"><tr></tr>
+	<tr class="tr2">
+	<td class="tac y-style">状态</td>
+	<td style="width:56%" class="tac">文章</td>
+	<td style="width:10%" class="y-style">作者</td>
+	<td style="width:6%" class="y-style">回复</td>
+	<td style="width:6%" class="y-style">人气</td>
+	<td style="width:17%" class="y-style">最后发表</td>
+	</tr>
+
+	<tr align="center" class="tr3 t_one"><td><a title="打开新窗口" href="read-htm-tid-579742.html" target="_blank"><img src="images/yellow/thread/topichot.gif" border=0></a></td><td style="text-align:left;padding-left:8px" id="td_579742"> 
+
+		<img src="images/yellow/file/headtopic_1.gif" alt="置顶帖标志" />
+
+	<h3><a href="read-htm-tid-579742.html" id="a_ajax_579742">通知：域名变更 找回密码 帐户合并 支付宝账户变更&nbsp; 暂停GG/下划线投放申诉</a></h3>  
+
+	 [ <img src="images/yellow/file/multipage.gif" border=0><span style="font-size:7pt;font-family:verdana;"> <a href="read-htm-tid-579742-page-1-fpage-1.html">1</a> <a href="read-htm-tid-579742-page-2-fpage-1.html">2</a></span> ]
+
+	</td>
+	<td class="tal y-style"><a href="profile-htm-action-show-uid-823383.html" class="bl">lineker41</a>
+		<div class="f10">2008-02-29</div></td>
+	<td class="tal f10 y-style">18</td>
+	<td class="tal f10 y-style">9895</td>
+	<td class="tal y-style"><a href="read-htm-tid-579742-page-e-fpage-1.html#a" class="f10"> 2008-06-22 20:17 </a><br />by: 楓</td>
+	</tr>
+
+	<tr class="tr2"><td colspan="6" class="tac" style="border-top:0">普通主题</td></tr>
+
+	<tr align="center" class="tr3 t_one"><td><a title="打开新窗口" href="read-htm-tid-628138.html" target="_blank"><img src="images/yellow/thread/topichot.gif" border=0></a></td><td style="text-align:left;padding-left:8px" id="td_628138"> 
+
+
+	<h3><a href="read-htm-tid-628138.html" id="a_ajax_628138"><b><font color=green>PHPWind社区营销4月30日前营销余额已支付到支付宝</font></b></a></h3>  
+
+	<img src="images/yellow/file/new.gif" align="absmiddle" alt="新帖标志" />
+
+	 [ <img src="images/yellow/file/multipage.gif" border=0><span style="font-size:7pt;font-family:verdana;"> <a href="read-htm-tid-628138-page-1-fpage-1.html">1</a> <a href="read-htm-tid-628138-page-2-fpage-1.html">2</a> <a href="read-htm-tid-628138-page-3-fpage-1.html">3</a></span> ]
+
+	</td>
+	<td class="tal y-style"><a href="profile-htm-action-show-uid-823383.html" class="bl">lineker41</a>
+		<div class="f10">2008-06-30</div></td>
+	<td class="tal f10 y-style">27</td>
+	<td class="tal f10 y-style">1145</td>
+	<td class="tal y-style"><a href="read-htm-tid-628138-page-e-fpage-1.html#a" class="f10"> 2008-07-05 11:09 </a><br />by: xxl7000</td>
+	</tr>
+
+	<tr align="center" class="tr3 t_one"><td><a title="打开新窗口" href="read-htm-tid-626875.html" target="_blank"><img src="images/yellow/thread/topicnew.gif" border=0></a></td><td style="text-align:left;padding-left:8px" id="td_626875"> 
+
+	<h3><a href="read-htm-tid-626875.html" id="a_ajax_626875">请问以前做的GG广告费什么时候转到阿里妈妈上面去！</a></h3>  
+
+	</td>
+	<td class="tal y-style"><a href="profile-htm-action-show-uid-966592.html" class="bl">伤感红鱼</a>
+		<div class="f10">2008-06-26</div></td>
+	<td class="tal f10 y-style">1</td>
+	<td class="tal f10 y-style">89</td>
+	<td class="tal y-style"><a href="read-htm-tid-626875-page-e-fpage-1.html#a" class="f10"> 2008-06-26 21:30 </a><br />by: 大力</td>
+	</tr>
+
+	<tr><td colspan="6" class="f_one" style="height:8px"></td></tr>
+	</tbody>
+</table></div>
+
+<div class="t3"><table cellspacing="0" cellpadding="0" width="100%" align="center">
+	<tr valign="top">
+		<td align="left"><div class="pages"><a href="thread-htm-fid-82-page-1.html" style="font-weight:bold">&laquo;</a><b> 1 </b><a href="thread-htm-fid-82-page-2.html">2</a><a href="thread-htm-fid-82-page-3.html">3</a><a href="thread-htm-fid-82-page-4.html">4</a><a href="thread-htm-fid-82-page-5.html">5</a><input type="text" size="3" onkeydown="javascript: if(event.keyCode==13){ location='thread.php?fid=82&page='+this.value+'';return false;}"><a href="thread-htm-fid-82-page-42.html" style="font-weight:bold">&raquo;</a> Pages: ( 1/42 total ) </div></td>
+	<td style="text-align:right;padding-top:5px">
+	
+
+	<a href="post-htm-fid-82.html"><img src="images/yellow/post.png" id="td_post1" /></a>
+
+	</td>
+	</tr>
+</table></div>
+
+<center>
+<img src="images/yellow/thread/topicnew.gif" /> 开放主题 <img src="images/yellow/thread/topichot.gif" /> 热门主题 <img src="images/yellow/thread/topiclock.gif" /> 锁定主题 <img src="images/yellow/thread/topicclose.gif" /> 关闭主题 <img src="images/yellow/thread/vote.gif" /> 投票主题 <img src="images/yellow/thread/votelock.gif" /> 锁定投票
+</center><br />
+</div>
+<div id="bottom"></div><br />
+<center class="gray">
+<small><span id="windspend">Total 0.007676(s) query 4, Time now is:07-04 16:42, Gzip enabled</span> <a href="http://www.miibeian.gov.cn" target="_blank">浙ICP备06001596号</a><br />
+Powered by <a href="http://www.phpwind.net/" target="_blank"><b>PHPWind</b></a> <a href="http://www.phpwind.net/" target="_blank"><b style="color:#FF9900">v6.3</b></a> <a href="http://www.phpwind.com/certificate.php?host=www.phpwind.net"><b>Certificate</b></a> Code &copy; 2003-07 <a href="http://www.phpwind.com/" target="_blank"><b>PHPWind.com</b></a> Corporation</small>
+</center><br />
+<div id="footer">
+	<span class="f12 fl"><a href="http://www.phpwind.com" title="" target="_blank">官方站</a> | <a href="http://www.uu1001.com" title="" target="_blank">申请免费论坛空间</a></span><a href="http://www.phpwind.com/info.php?type=contact">Contact us</a> | <a href="wap/index.php">Wap</a> | <a href="javascript:scroll(0,0)">Top</a>
+
+<script type="text/javascript" src="http://js.tongji.cn.yahoo.com/655147/ystat.js"></script>
+<noscript>
+	<a href="http://tongji.cn.yahoo.com" target="_blank">
+	<img src="http://img.tongji.cn.yahoo.com/655147/ystat.gif"/>
+	</a>
+</noscript>
+
+</div>
+</div>
+</body></html>

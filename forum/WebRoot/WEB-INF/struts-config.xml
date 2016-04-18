@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<data-sources />
+
+	<form-beans>
+		<form-bean name="personForm"
+			type="com.helloweenvsfei.forum.struts.form.PersonForm" />
+		<form-bean name="categoryForm"
+			type="com.helloweenvsfei.forum.struts.form.CategoryForm" />
+		<form-bean name="boardForm"
+			type="com.helloweenvsfei.forum.struts.form.BoardForm" />
+		<form-bean name="threadForm"
+			type="com.helloweenvsfei.forum.struts.form.ThreadForm" />
+		<form-bean name="replyForm"
+			type="com.helloweenvsfei.forum.struts.form.ReplyForm" />
+
+	</form-beans>
+
+	<global-exceptions>
+		<exception key="login" type="java.lang.Exception"
+			handler="com.helloweenvsfei.forum.struts.exception.ForumExceptionHandler">
+		</exception>
+	</global-exceptions>
+
+	<global-forwards />
+
+	<action-mappings>
+
+		<action attribute="personForm"
+			input="/form/person/listPerson.jsp" name="personForm" path="/person"
+			scope="request" parameter="action"
+			type="com.helloweenvsfei.forum.struts.action.PersonAction">
+			<forward name="add" path="/form/person/addPerson.jsp"></forward>
+			<forward name="list" path="/form/person/listPerson.jsp"></forward>
+		</action>
+
+		<action attribute="categoryForm"
+			input="/form/category/listCategory.jsp" name="categoryForm"
+			parameter="action" path="/category" scope="request"
+			type="com.helloweenvsfei.forum.struts.action.CategoryAction" />
+
+		<action attribute="boardForm" input="/form/board/listBoard.jsp"
+			name="boardForm" parameter="action" path="/board" scope="request"
+			type="com.helloweenvsfei.forum.struts.action.BoardAction" />
+
+		<action attribute="threadForm"
+			input="/form/thread/listThread.jsp" name="threadForm"
+			parameter="action" path="/thread" scope="request"
+			type="com.helloweenvsfei.forum.struts.action.ThreadAction" />
+
+		<action attribute="replyForm" input="/form/reply/listReply.jsp"
+			name="replyForm" parameter="action" path="/reply" scope="request"
+			type="com.helloweenvsfei.forum.struts.action.ReplyAction" />
+
+	</action-mappings>
+
+	<controller
+		processorClass="org.springframework.web.struts.DelegatingRequestProcessor" />
+
+	<message-resources parameter="ApplicationResources" />
+
+</struts-config>
+

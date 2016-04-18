@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" 
+		"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+
+	<!-- 父布局类型 -->
+	<definition name="parentLayout" path="/homepage.jsp">
+		<put name="top" value="/header.jsp" />
+		<put name="menu" value="/menu.jsp" />
+		<put name="main" value="/main.jsp" />
+		<put name="footer" value="/footer.jsp" />
+	</definition>
+
+	<!-- list布局, 继承自parentLayout, 除了main为list.jsp外其余都一样 -->
+	<definition name="listLayout" extends="parentLayout">
+		<put name="main" value="/list.jsp" />
+	</definition>
+
+	<!-- view布局, 继承自parentLayout, 除了main为view.jsp外其余都一样 -->
+	<definition name="viewLayout" extends="parentLayout">
+		<put name="main" value="/view.jsp" />
+	</definition>
+
+</tiles-definitions>

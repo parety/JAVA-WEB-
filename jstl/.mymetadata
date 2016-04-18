@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="jstl"
+  id="myeclipse.1208969571696"
+  context-root="/jstl"
+  j2ee-spec="5.0"
+  archive="jstl.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

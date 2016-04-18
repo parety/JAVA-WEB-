@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<data-sources>
+		<data-source type="org.apache.commons.dbcp.BasicDataSource">
+			<set-property property="driverClassName"
+				value="com.mysql.jdbc.Driver" />
+			<set-property property="url"
+				value="jdbc:mysql://localhost:3306/struts?characterEncoding=UTF-8" />
+			<set-property property="username" value="root" />
+			<set-property property="password" value="admin" />
+		</data-source>
+	</data-sources>
+
+	<form-beans>
+		<form-bean name="helloForm"
+			type="com.helloweenvsfei.struts.form.HelloForm" />
+		<form-bean name="personForm"
+			type="com.helloweenvsfei.struts.form.PersonForm" />
+		<form-bean name="dispatchForm"
+			type="com.helloweenvsfei.struts.form.DispatchForm" />
+		<form-bean name="tagForm"
+			type="com.helloweenvsfei.struts.form.TagForm" />
+		<form-bean name="uploadForm"
+			type="com.helloweenvsfei.struts.form.UploadForm" />
+		<form-bean name="tileForm"
+			type="com.helloweenvsfei.struts.form.TileForm" />
+		<form-bean name="useBeanForm"
+			type="com.helloweenvsfei.struts.form.UseBeanForm" />
+		<form-bean name="validatorTestForm"
+			type="com.helloweenvsfei.struts.form.ValidatorTestForm" />
+		<form-bean name="dynaTestForm"
+			type="org.apache.struts.action.DynaActionForm">
+			<form-property name="birthday" type="java.sql.Date"
+				initial="" />
+			<form-property name="age" type="java.lang.Integer"
+				initial="18" />
+			<form-property name="name" type="java.lang.String"
+				initial="" />
+		</form-bean>
+	</form-beans>
+
+	<global-exceptions>
+		<exception key="login.error"
+			type="javax.security.auth.login.AccountException"
+			handler="com.helloweenvsfei.struts.exceptionhandler.AccountExceptionHandler" />
+	</global-exceptions>
+
+	<global-forwards />
+
+	<action-mappings>
+
+		<action path="/test" forward="/form/hello.jsp"></action>
+
+		<action attribute="helloForm" input="/form/hello.jsp"
+			name="helloForm" path="/hello" scope="request"
+			type="com.helloweenvsfei.struts.action.HelloAction">
+			<forward name="success" path="/form/helloSuccess.jsp" />
+			<forward name="fail" path="/form/helloFail.jsp"
+				redirect="true" />
+		</action>
+		<action attribute="personForm" input="/form/addPerson.jsp"
+			name="personForm" path="/person" scope="request"
+			type="com.helloweenvsfei.struts.action.PersonAction">
+			<forward name="success" path="/form/addPersonSuccess.jsp"></forward>
+			<forward name="list" path="/form/listPerson.jsp"></forward>
+		</action>
+		<action attribute="dispatchForm" input="/form/dispatch.jsp"
+			name="dispatchForm" parameter="action" path="/dispatch"
+			scope="request"
+			type="com.helloweenvsfei.struts.action.DispatchAction" />
+		<action attribute="tagForm" input="/form/tag.jsp" name="tagForm"
+			path="/tag" scope="request"
+			type="com.helloweenvsfei.struts.action.TagAction" />
+		<action attribute="uploadForm" input="/form/upload.jsp"
+			name="uploadForm" path="/upload" scope="request"
+			type="com.helloweenvsfei.struts.action.UploadAction" />
+		<action attribute="tileForm" input="/form/tile.jsp"
+			name="tileForm" path="/tile" scope="request"
+			type="com.helloweenvsfei.struts.action.TileAction">
+			<forward name="list" path="listLayout"></forward>
+			<forward name="view" path="viewLayout"></forward>
+		</action>
+		<action attribute="useBeanForm" input="/form/useBean.jsp"
+			name="useBeanForm" path="/useBean" scope="request"
+			type="com.helloweenvsfei.struts.action.UseBeanAction" />
+		<action attribute="validatorTestForm"
+			input="/form/validatorTest.jsp" name="validatorTestForm"
+			path="/validatorTest" scope="request"
+			type="com.helloweenvsfei.struts.action.ValidatorTestAction" />
+		<action attribute="dynaTestForm" input="/form/dynaTest.jsp"
+			name="dynaTestForm" path="/dynaTest" scope="request"
+			type="com.helloweenvsfei.struts.action.DynaTestAction" />
+	</action-mappings>
+
+	<message-resources
+		parameter="com.helloweenvsfei.struts.ApplicationResources" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles-defs.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml" />
+		<set-property property="stopOnFirstError" value="false" />
+	</plug-in>
+
+
+</struts-config>
+
